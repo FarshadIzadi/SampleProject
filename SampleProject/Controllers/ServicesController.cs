@@ -37,7 +37,7 @@ namespace SampleProject.Controllers
             };
             
             // در صورتی که مقداری در ورودی وارد نشده باشد خطا برمیگرداند
-            if (serviceRequests == null)
+            if (serviceRequests == null || serviceRequests.Count == 0)
             {
                 bill.ErrorMessage = "فیلد های داده بطور صحیح وارد نشده اند.";
                 return bill;
