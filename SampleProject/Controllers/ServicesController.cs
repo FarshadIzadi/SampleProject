@@ -48,7 +48,7 @@ namespace SampleProject.Controllers
             // داده مربوط به پوشش های درخواستی را از دیتابیس دریافت می کند
             var serviceFromDb = _context.Services.Where(x => serviceTypes.Contains(x.ServiceName)).AsNoTracking().ToList();
 
-            // با فرظ بر این که هر کاربر در  هر درخواست تنها هر پوشش را تنها یک بار انتخاب میکند
+            // با فرض بر این که هر کاربر در  هر درخواست تنها هر پوشش را تنها یک بار انتخاب میکند
             // در صورتی که تعداد پوشش های انتخابی با تعداد پوشش های بارگذاری شده از دیتابیس 
             // یکی نباشد خطایی در وارد کردن نوع پوشش پیش آمده
             if (serviceRequests.Count != serviceFromDb.Count)
